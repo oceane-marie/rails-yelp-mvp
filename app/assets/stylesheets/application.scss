@@ -114,30 +114,34 @@ h2{
   }
 }
 
-.reviews{
+.container-review{
   border: solid 2px black;
   background-color: rgba(183, 126, 50, 0.2);
   width: 40%;
-  position: relative;
   height: fit-content;
+}
+.reviews{
+  position: relative;
+
   display: flex;
-
-  p{
-    font-size: 24px;
-    margin: 25px 25px;
+  #review-head a{
+    justify-content: space-around;
+    position: absolute;
+    right: 10px;
+    top: 20px;
   }
-
   h2{
     margin: 25px 25px;
     text-align: left;
   }
 }
 
-#review-head{
-
-  justify-content: space-around;
-  position: absolute;
+p{
+  font-size: 16px;
+  margin: 25px 25px;
 }
+
+
 
 // @media (max-width: 540px) {
 // .reviews {
@@ -165,4 +169,8 @@ h2{
 
 .container-form{
   width: 60%
+}
+
+.pb-30{
+  padding-bottom: 30px;
 }
