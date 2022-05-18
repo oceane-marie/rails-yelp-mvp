@@ -2,37 +2,39 @@
   <h1><%= @restaurant.name %></h1>
 </div>
 
-<ul>
-  <li>
-    <%= @restaurant.address %>
-  </li>
-   <li>
-    <%= @restaurant.category.capitalize() %>
-  </li>
-   <li>
+<div class="container">
+  <div class="infos">
+  <p>
+    <%= @restaurant.address %> <br>
+    <%= @restaurant.category.capitalize() %> <br>
     <% if @restaurant.phone_number == ("") %>
       Sorry, we don't have the phone number
     <% else %>
       <%= @restaurant.phone_number %>
     <% end %>
-  </li>
-  <li>
-    <%= link_to restaurants_path do%>
-      <i class="fa-solid fa-angles-left"></i>Return
-    <% end %>
-  </li>
-   <li>
-    <%= link_to new_restaurant_review_path(@restaurant) do%>
-      <i class="fa-solid fa-plus"></i>Leave a review
-    <% end %>
-  </li>
-</ul>
+  </p>
+  </div>
+  <div class="reviews">
+    <div class="review-head">
+      <h2>Reviews</h2>
+    </div>
+    <div id="review-head">
+        <%= link_to new_restaurant_review_path(@restaurant) do%>
+          <i class="fa-solid fa-plus pr-10"></i>Leave a review
+        <% end %>
+      </div>
+    </div>
 
-<ul>
-  <h2>Reviews</h2>
-  <% @restaurant.reviews.each do |review| %>
-  <li>
-      <%= "#{review.rating}- #{review.content}" %>
+      <p>
+      <% @restaurant.reviews.each do |review| %>
+        <%= "#{review.rating}/5- #{review.content.capitalize()}" %>
+      <% end %>
+      </p>
+  </div>
+</div>
+
+<div id="footer">
+    <%= link_to restaurants_path do%>
+      <i class="fa-solid fa-angles-left pr-10"></i>Return
     <% end %>
-  </li>
-</ul>
+</div>
