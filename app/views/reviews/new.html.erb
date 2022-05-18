@@ -1,6 +1,10 @@
 <h1>Leave a review</h1>
+<div class="container">
+<div class="container-form">
 <%= simple_form_for [@restaurant, @review] do |f| %>
   <%= f.input :content %>
   <%= f.input :rating, placeholder: 'Choose between 0 and 5'  %>
-  <%= f.button :submit %>
+  <%= f.button :submit, "Create" %>
 <% end %>
+</div>
+</div>
