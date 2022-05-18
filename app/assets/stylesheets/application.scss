@@ -1,0 +1,74 @@
+@import "bootstrap/scss/bootstrap";
+@import "./restaurants.scss";
+@import "./reviews.scss";
+
+body{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100;
+  background-color: rgba(183, 126, 50, 0.4);
+}
+
+#banner {
+  margin-top: 0px;
+  background-image: url("https://images.pexels.com/photos/734562/pexels-photo-734562.jpeg");
+  background-size: cover;
+  background-position: center;
+
+  height: 70vh;
+  color: white;
+  border-bottom: solid 4px black;
+}
+
+#banner h1{
+  padding-top: 120px;
+}
+
+h1, h2{
+  text-align: center;
+
+  font-family: 'Italiana', serif;
+}
+h1{
+  font-size: 64px;
+}
+h2{
+  font-size: 32px;
+}
+
+.container-card {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 50px 0px;
+
+  a {
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    border-radius: 100px;
+    padding: 15px 25px;
+
+    &:hover{
+      background-color: #B77E32;
+    }
+  }
+}
+
+#add-restaurant{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 10px 0px;
+
+  a {
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    border-radius: 100px;
+    padding: 15px 25px;
+
+    &:hover{
+      background-color: #B77E32;
+    }
+  }
+}
